@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <persistence-unit name="JPA-OpenJPA-PU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.apache.openjpa.persistence.PersistenceProviderImpl</provider>
+    <class>entita.MicroMarket</class>
+    <class>entita.ProductCode</class>
+    <class>entita.Manufacturer</class>
+    <class>entita.PurchaseOrder</class>
+    <class>entita.Product</class>
+    <class>entita.DiscountCode</class>
+    <class>entita.Customer</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/sample"/>
+      <property name="javax.persistence.jdbc.user" value="app"/>
+      <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.ClientDriver"/>
+      <property name="javax.persistence.jdbc.password" value="app"/>
+      <property name="javax.persistence.schema-generation.database.action" value="create"/>
+      <property name="openjpa.jdbc.DBDictionary" value="derby(StoreCharsAsNumbers=false)"/>
+      <property name="openjpa.Log" value="DefaultLevel=WARN, Runtime=INFO, Tool=INFO, SQL=TRACE"/>
+      <property name="openjpa.ConnectionFactoryProperties" value="PrintParameters=true, PrettyPrint=true, PrettyPrintLineLength=30"/>
+    </properties>
+  </persistence-unit>
+</persistence>
